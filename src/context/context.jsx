@@ -5,9 +5,12 @@ export const DataContext = createContext();
 
 export function DataProvider({ children }) {
   const [points, setPoints] = useState(0);
+  const [pokeIdList, setPokeIdList] = useState([]);
 
   return (
-    <DataContext.Provider value={{ points, setPoints }}>
+    <DataContext.Provider
+      value={{ points, setPoints, pokeIdList, setPokeIdList }}
+    >
       {children}
     </DataContext.Provider>
   );
