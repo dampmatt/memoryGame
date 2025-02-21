@@ -1,18 +1,19 @@
+import Card from "./card";
 export default function GameBoard() {
   return (
-    <div id="#game-board">
-      <card />
-      <card />
-      <card />
-      <card />
-      <card />
-      <card />
-      <card />
-      <card />
-      <card />
-      <card />
-      <card />
-      <card />
+    <div id="game-board">
+      <Card />
+      <Card />
+      <Card />
+      <Card />
+      <Card />
+      <Card />
+      <Card />
+      <Card />
+      <Card />
+      <Card />
+      <Card />
+      <Card />
     </div>
   );
 }
