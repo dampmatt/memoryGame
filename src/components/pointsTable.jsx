@@ -6,8 +6,8 @@ export default function PointsTable() {
   return (
     <div id="pointsTable">
       <ul>
-        <li>points:{points}</li>
-        <li>Total:12</li>
+        <li>Points: {points} |</li>
+        <li>Total: 12</li>
       </ul>
     </div>
   );

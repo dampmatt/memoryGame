@@ -66,3 +66,42 @@ button:focus-visible {
     background-color: #f9f9f9;
   }
 }
+
+/*heading*/
+#game {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+#main-heading {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px 2vw;
+  background-color: #213547;
+  align-items: center;
+  /* background-color: #646cff; */
+}
+
+/* points table css */
+#pointsTable > ul {
+  list-style: none;
+  display: flex;
+
+  gap: 5px;
+}
+
+/*rules */
+#rules {
+  font-size: 1em;
+  font-weight: 200;
+  padding: 10px 20px;
+}
+
+/*buttons*/
+#buttons {
+  display: flex;
+  gap: 15px;
+  padding-bottom: 40px;
+}

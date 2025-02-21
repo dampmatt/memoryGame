@@ -1,15 +1,22 @@
-import "./App.css";
+// import "./App.css";
 import PointsTable from "./components/pointsTable";
-
+import Rules from "./components/rules";
+import GameBoard from "./components/Gameboard";
 function App() {
   return (
-    <div id="#game-heading">
-      <div id="#main-heading">
-        <h1>memory game</h1>
-        <PointsTable />
+    <div id="game">
+      <div id="game-heading">
+        <div id="main-heading">
+          <h1>Memory-Game</h1>
+          <PointsTable />
+        </div>
+        <Rules />
       </div>
-      <div id="rules">
-        <rules />
+
+      <GameBoard />
+      <div id="buttons">
+        <button>Start</button>
+        <button>Hard</button>
       </div>
     </div>
   );
