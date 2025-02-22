@@ -4,10 +4,11 @@ import PointsTable from "./components/pointsTable";
 import Rules from "./components/rules";
 import GameBoard from "./components/Gameboard";
 import { DataContext } from "./context/context";
+import { game } from "./components/game";
 
 function App() {
   const [loading, setLoading] = useState(false);
-  const { setPokeIdList } = useContext(DataContext);
+  const { setPokeIdList, setGame } = useContext(DataContext);
 
   async function getImage(id) {
     const promise = await fetch(`https://pokeapi.co/api/v2/pokemon/${id}`);
@@ -18,6 +19,10 @@ function App() {
   }
 
   let handleClick = async () => {
+    const Game = new game();
+    Game.setProgress();
+    setGame(Game);
+
     setLoading(true);
     const numbers = new Set();
     while (numbers.size < 12) {
