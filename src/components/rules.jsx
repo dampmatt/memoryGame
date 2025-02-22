@@ -3,13 +3,13 @@ export default function Rules() {
     <div id="rules">
       <h3>Rules</h3>
       <i>
-        Welcome to the Memory Game! Test your memory and concentration by
-        finding matching pairs of cards. The game begins with all 12 cards
-        placed face-down. Click on any two cards to reveal them—if they match,
-        they stay face-up; if not, they will flip back after a short delay. Keep
-        playing until all pairs are found! Each successful match earns 1 point,
-        and the goal is to complete the game with the fewest moves possible.
-        Think fast, remember well, and try to beat your best score! 🎯🃏
+        Welcome to the Memory Game! The objective of the game is simple—click on
+        all 12 unique cards without selecting the same card twice. Each time you
+        click a card, the board will shuffle, making it more challenging to
+        remember your previous choices. If you accidentally click the same card
+        twice, the game will end immediately. To win, you must successfully
+        select all 12 cards in a row without repeating any. Stay focused, test
+        your memory, and see if you can complete the challenge. Good luck! 🎮🧠
       </i>
     </div>
   );
