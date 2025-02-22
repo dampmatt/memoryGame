@@ -110,13 +110,21 @@ button:focus-visible {
 #game-board {
   max-width: 100vw;
   display: grid;
-  grid-template-columns: repeat(6, minmax(150px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
   gap: 5vw;
   /* row-gap: 40px; */
   /* place-items: center; */
-  padding: 5vh 0;
+  padding: 5vh 5vw;
 }
 .cards {
   height: 30vh;
-  background-color: #213547;
+
+  background-size: cover;
+  background-position: center;
+  cursor: pointer;
+  transition: filter 0.3s ease-in-out, transform 0.2s ease-in-out;
+}
+.cards:hover {
+  filter: brightness(1.2); /* Slightly brightens the background */
+  transform: scale(1.05);
 }
