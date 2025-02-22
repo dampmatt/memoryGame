@@ -1,15 +1,13 @@
 import { createContext, useState } from "react";
 import PropTypes from "prop-types";
+import { game } from "../components/game";
 
 export const DataContext = createContext();
 
 export function DataProvider({ children }) {
   const [points, setPoints] = useState(0);
   const [pokeIdList, setPokeIdList] = useState([]);
-  const [gameState, setGameState] = useState(0);
-  const [gameBoard, setGameBoard] = useState([
-    0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
-  ]);
+  const [Game, setGame] = useState(new game());
 
   return (
     <DataContext.Provider
@@ -18,10 +16,8 @@ export function DataProvider({ children }) {
         setPoints,
         pokeIdList,
         setPokeIdList,
-        gameState,
-        setGameState,
-        gameBoard,
-        setGameBoard,
+        Game,
+        setGame,
       }}
     >
       {children}

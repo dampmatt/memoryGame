@@ -17,7 +17,7 @@ export default function Card({ id, onClick }) {
     <div
       className="cards"
       id={id}
-      onClick={onClick} // Removed unnecessary wrapper function
+      onClick={onClick}
       style={{ backgroundImage: bgImage ? `url(${bgImage})` : "none" }}
     ></div>
   );
