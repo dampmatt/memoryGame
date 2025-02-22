@@ -1,7 +1,10 @@
 export class game {
   inProgress = false;
-  game() {
-    this.gameboard = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
+  isWon = false;
+  isLost = false;
+  gameboard = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
+  points = 0;
+  constructor() {
     this.points = 0;
     this.gameIsFinished = false;
   }
@@ -9,15 +12,29 @@ export class game {
     this.inProgress = true;
   }
   playerMove(pos) {
-    if (this.gameboard[pos] === 0 && this.inProgress) {
+    console.log(pos);
+    if (this.inProgress && this.gameboard[pos] === 0) {
       this.gameboard[pos] = 1;
       if (this.points === 11) {
-        return 2;
+        this.gameIsFinished = true;
+        this.inProgress = false;
+        this.isWon = true;
       }
-      this.points++;
-      return 1;
+      console.log(this.points);
+      this.points += 1;
     } else {
-      return 0;
+      this.inProgress = false;
+      this.isLost = true;
+      console.log(this.gameboard);
     }
+  }
+
+  checkProgress() {
+    // console.log("x");
+    return this.inProgress;
+  }
+  getPoints() {
+    // console.log(this.points);
+    return this.points;
   }
 }
